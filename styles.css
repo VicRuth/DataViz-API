@@ -1,0 +1,145 @@
+body {
+    background-image: url("fond_eiffel.png");
+    background-size: cover; /* Définit la taille de l'image de fond pour couvrir 100% de la largeur et 100% de la hauteur de l'élément */
+    background-position: center center; /* Centre l'image */
+    background-repeat: no-repeat; /* Évite la répétition de l'image */
+    background-attachment: fixed; /* Fixe l'image pour un effet de parallaxe */
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6; /* Définir la hauteur de ligne à 1.6 fois la taille de la police pour améliorer l'espacement et la lisibilité du texte */
+    margin: 0; /* Évite les marges par défaut du body */
+    position: relative;
+}
+
+h1 {
+    padding-left: 230px;
+    font-size: 50px; /* Définit la taille de la police à 44 pixels */
+}
+
+/* Sélectionne l'image avec l'ID #logo_ada à l'intérieur des éléments <h1> */
+h1 img#logo_ada {
+    width: 80px; /* Définit la largeur de l'image à 50 pixels */
+    height: auto; /* Ajuste automatiquement la hauteur de l'image en fonction de la largeur pour conserver les proportions */
+    position: absolute; /* Positionne l'image de manière absolue par rapport à son conteneur le plus proche avec une position relative */
+    right: 50px; /* Positionne l'image à 15 pixels du bord droit de son conteneur */
+}
+
+/* Sélectionne les éléments avec la classe .contener_global */
+.contener_global {
+    display: flex; /* Utilise Flexbox pour la mise en page des éléments enfants */
+    width: 100%; /* Définit la largeur de l'élément à 100% du conteneur parent */
+    padding-left: 40px;
+    padding-right: 40px;
+    /* Ajoute un espacement intérieur de 20 pixels de tous les côtés */
+    gap: 40px; /* Définit un espace de 20 pixels entre chaque élément enfant */
+    box-sizing: border-box; /* Inclut les bordures et le padding dans le calcul de la largeur totale de l'élément */
+    justify-content: space-between; /* Distribue l'espace entre les éléments enfants de manière à ce qu'ils soient répartis uniformément avec des espaces égaux entre eux */
+    flex-direction: row; /* Organise les éléments enfants en ligne, de gauche à droite */
+    font-family: Arial, Helvetica, sans-serif; /* Définit la police de caractères pour les éléments enfants */
+}
+
+/* Style pour l'élément avec l'ID #map */
+#map {
+    flex: 5; /* Permet à l'élément de s'étendre en fonction de l'espace disponible, avec une priorité de 2 */
+    padding-top: 27px;
+    padding-bottom: 27px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 75%;
+    display: inline-block; /* Affiche l'élément en ligne comme un bloc */
+}
+
+/* Style pour l'élément avec la classe .recherche_criteres */
+.recherche_criteres {
+    display: flex;
+    width: 25%;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box; /* Inclut les bordures et le padding dans le calcul de la largeur totale de l'élément */
+    flex-direction: column; /* Organise les éléments enfants en colonne, de haut en bas */
+    font-family: Arial, Helvetica, sans-serif; /* Définit la police de caractères pour les éléments enfants */
+    gap: 10px; /* Définit un espace de 20 pixels entre chaque élément enfant */
+}
+
+/* Style pour l'élément avec la classe .recherche */
+.recherche {
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    backdrop-filter: blur(50px);
+}
+
+/* Style pour les éléments <label> dans .recherche */
+.recherche label {
+    display: block; /* Affiche l'élément en tant que bloc pour occuper toute la largeur disponible */
+    margin-bottom: 10px;
+    font-weight: bold; /* Met le texte en gras */
+    font-size: 25px;
+}
+
+/* Style pour les champs de texte dans .recherche */
+.recherche input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc; /* Définit une bordure grise claire de 1 pixel */
+    border-radius: 4px; /* Arrondit les coins du champ avec un rayon de 4 pixels */
+    margin-bottom: 10px; /* Ajoute un espacement en bas de 10 pixels */
+}
+
+/* Style pour les boutons dans .recherche */
+.recherche button {
+    width: 77%; /* Définit la largeur du bouton à 80% de son conteneur parent */
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none; /* Supprime les bordures par défaut */
+    border-radius: 4px; /* Arrondit les coins du bouton avec un rayon de 4 pixels */
+    cursor: pointer; /* Change le curseur en pointeur lors du survol */
+    transition: background-color 0.3s ease; /* Ajoute une transition douce pour la couleur de fond */
+}
+
+/* Style pour le bouton au survol */
+.recherche button:hover {
+    background-color: #0056b3; /* Change la couleur de fond lorsque l'utilisateur survole le bouton */
+}
+
+/* Style pour l'élément avec la classe .criteres */
+.criteres {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    padding-right: 20px; /* Ajoute un espacement intérieur de 20 pixels de tous les côtés */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajoute une ombre portée légère sous l'élément */
+    border-radius: 8px; /* Arrondit les coins de l'élément avec un rayon de 8 pixels */
+    backdrop-filter: blur(6px);
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Style pour les éléments <div> enfants de .criteres */
+.criteres > div {
+    margin-bottom: 10px; /* Ajoute un espacement en bas de 10 pixels */
+}
+
+/* Style pour les éléments <strong> dans .criteres */
+.criteres strong {
+    text-decoration-line: underline;
+    text-underline-offset: 7px;
+    display: block; /* Affiche l'élément en tant que bloc pour occuper toute la largeur disponible */
+    margin-bottom: 5px; /* Ajoute un espacement en bas de 5 pixels */
+}
+
+/* Style pour les éléments <p> dans .criteres */
+.criteres p {
+    margin-left: 10px; /* Ajoute un espacement à gauche de 10 pixels */
+    font-style: italic;
+}
+
+/* Styles spécifiques aux écrans de 768 pixels de large ou moins (Responsive Design) */
+@media (max-width: 768px) {
+    /* Réorganise les éléments enfants de .contener_global en colonne */
+    .contener_global {
+        flex-direction: column;
+    }
+    /* Réduit la hauteur de #map à 300 pixels pour les petits écrans */
+    #map {
+        height: 300px;
+    }
+}

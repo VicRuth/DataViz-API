@@ -1,2 +1,1 @@
-# DataViz-API
-Un projet collectif de 2 semaines avec un groupe de 3 personnes.
+Les fichiers à considérer pour le MVP sont les fichiers index.html, script.js et style.css

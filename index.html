@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+            integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+            crossorigin=""
+        />
+        <script
+            src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""
+        ></script>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <h1>Lieux de tournage à Paris depuis 2016 <img src="logo_ada.png" id="logo_ada" /></h1>
+        <div class="contener_global">
+            <div id="map" class="map"></div>
+            <div class="recherche_criteres">
+                <div id="recherche" class="recherche">
+                    <label for="input"> Chercher un nom de film</label>
+                    <input id="input" type="text" name="name" required placeholder="Entrez un film" />
+                    <button id="search" type="button">Rechercher</button>
+                </div>
+
+                <div class="criteres">
+                    <div id="div_type_tournage">
+                        <strong>Type de l'oeuvre :</strong>
+                        <p id="type_tournage"></p>
+                    </div>
+                    <div id="div_nom_oeuvre">
+                        <strong>Nom de l'oeuvre :</strong>
+                        <p id="nom_oeuvre"></p>
+                    </div>
+                    <div id="div_annee_tournage">
+                        <strong>Année tournage :</strong>
+                        <p id="annee_tournage"></p>
+                    </div>
+                    <div id="div_nom_prod">
+                        <strong>Producteur.ice :</strong>
+                        <p id="nom_prod"></p>
+                    </div>
+                    <div id="div_nom_real">
+                        <strong>Réalisateur.ice :</strong>
+                        <p id="nom_real"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="module" src="script.js"></script>
+    </body>
+</html>
